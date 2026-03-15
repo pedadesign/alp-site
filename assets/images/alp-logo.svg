@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="250.93283mm"
+   height="250.60947mm"
+   viewBox="0 0 250.93283 250.60948"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   sodipodi:docname="alp-logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.15804095"
+     inkscape:cx="341.68359"
+     inkscape:cy="522.01659"
+     inkscape:window-width="1200"
+     inkscape:window-height="564"
+     inkscape:window-x="281"
+     inkscape:window-y="237"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(40.932821,-46.390533)">
+    <g
+       id="g1">
+      <path
+         fill="#05a5dc"
+         d="M -41.132818,46.174701 H 210.20001 V 297.21583 H -41.132818 Z"
+         fill-rule="evenodd"
+         id="path3"
+         style="stroke-width:1.50805" />
+      <text
+         xml:space="preserve"
+         style="font-size:126.58px;line-height:1.1;font-family:Literata;-inkscape-font-specification:'Literata @opsz=72,wght=700';font-variation-settings:'opsz' 72, 'wght' 700;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#f9f9f9;fill-rule:evenodd;stroke-width:12.9429"
+         x="84.280334"
+         y="201.50478"
+         id="text1"><tspan
+           sodipodi:role="line"
+           id="tspan1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DM Serif Display';-inkscape-font-specification:'DM Serif Display';stroke-width:12.9429"
+           x="84.280334"
+           y="201.50478">alp</tspan></text>
+    </g>
+  </g>
+</svg>
