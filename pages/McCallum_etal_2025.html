@@ -726,6 +726,7 @@ a { color: var(--link-color); text-decoration: none; }
 .audio-btn.has-error .icon-play, .audio-btn.has-error .icon-pause { display: none; }
 .audio-btn.has-error .icon-error { display: block; }
 .abstract-audio { display: none; }
+#book-podcast-audio { display: none; }
 body.print-preview-active .audio-btn { display: none; }
 
 /* ============================================================
@@ -1306,18 +1307,45 @@ body.print-preview-active .print-only { display: block; }
       });
     }
 
+    /* Book-intro podcast toolbar button: same lazy-src-on-first-click
+       pattern as initAbstractAudio(), but for a single button/audio pair
+       living in #view-controls rather than per-chapter abstracts. */
+    function initBookPodcast() {
+      var btn = document.getElementById('btn-book-podcast');
+      var audio = document.getElementById('book-podcast-audio');
+      if (!btn || !audio) return;
+      var playLabel = btn.textContent;
+      var pauseLabel = '⏸ Pause: Book Intro Podcast';
+
+      audio.addEventListener('play', function () { btn.textContent = pauseLabel; });
+      audio.addEventListener('pause', function () { btn.textContent = playLabel; });
+      audio.addEventListener('ended', function () { btn.textContent = playLabel; });
+      audio.addEventListener('error', function () { btn.disabled = true; });
+
+      btn.addEventListener('click', function () {
+        if (!audio.src) audio.src = audio.getAttribute('data-audio-src');
+        if (audio.paused) {
+          audio.play().catch(function () { btn.disabled = true; });
+        } else {
+          audio.pause();
+        }
+      });
+    }
+
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', function () {
         initPrintPreview();
         initTheme();
         initBackToTop();
         initAbstractAudio();
+        initBookPodcast();
       });
     } else {
       initPrintPreview();
       initTheme();
       initBackToTop();
       initAbstractAudio();
+      initBookPodcast();
     }
 
     /* #book-toc and #toc-toggle are static HTML (see right after <body>) —
@@ -1498,6 +1526,8 @@ body.print-preview-active .print-only { display: block; }
 
 <div id="view-controls" class="no-print">
   <button id="theme-toggle" type="button" aria-label="Switch to dark reading theme">🌙</button>
+  <button id="btn-book-podcast" type="button" aria-label="Listen to the book introduction podcast">🎧 Listen: Book Intro Podcast</button>
+  <audio id="book-podcast-audio" preload="none" data-audio-src="audio/bookintro-podcast.mp3"></audio>
   <button id="btn-print-preview" type="button">Print / Export PDF</button>
   <button id="btn-back-to-reading" type="button" hidden>← Back to reading view</button>
 </div>
